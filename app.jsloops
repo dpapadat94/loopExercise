@@ -1,0 +1,79 @@
+// Exercise 1 Section
+for (i = 1; i <= 100; i++) {
+  if (i % 2 == 0) {
+    continue;
+  } else {
+    console.log(i);
+  }
+}
+
+// Exercise 2 Section
+for (i = 1; i <= 100; i++) {
+  if (i % 3 == 0 && i % 5 == 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 == 0) {
+    console.log("FIZZ");
+  } else if (i % 5 == 0) {
+    console.log("BUZZ");
+  } else {
+    console.log(i);
+  }
+}
+//Exercise 3 Section (FizzBUZZ while )
+let x = 1;
+
+while (x <= 100) {
+  let output = " ";
+  if (x % 3 == 0) {
+    output += "FIZZ";
+  }
+  if (x % 5 == 0) {
+    output += "BUZZ";
+  }
+  console.log(`${x} ${output}`);
+  x++;
+}
+
+//Exercise 3 Section (FizzBUZZ DO/WHILE)
+do {
+  let output = " ";
+  if (x % 3 == 0) {
+    output += "FIZZ";
+  }
+  if (x % 5 == 0) {
+    output += "BUZZ";
+  }
+  console.log(`${x} ${output}`);
+  x++;
+} while (x < 100);
+
+//Exercise 4 Section
+let value = Math.round(Math.random() * 500);
+let n = Math.round(Math.random() * (500 - 100) + 100);
+for (i = 1; i <= n; i++) {
+  if (i == value) {
+    console.log(`found ${value}!`);
+    break;
+  }
+  if (i == n) {
+    console.log(`Did not Find ${value} within 1-${n}`);
+  }
+}
+//Exercise 5 Section
+let fizzDivisor = Math.round(Math.random() * (10 - 1) + 1);
+let buzzDivisor = Math.round(Math.random() * (10 - 1) + 1);
+let end = Math.round(Math.random() * (1000 - 1) + 1);
+let start = Math.round(Math.random() * (10 - 1) + 1);
+
+for (i = start; i <= end; i++) {
+  let output = " ";
+
+  if (i % fizzDivisor == 0) {
+    output += "FIZZ";
+  }
+
+  if (i % buzzDivisor == 0) {
+    output += "BUZZ";
+  }
+  console.log(`${i} ${output}`);
+}
